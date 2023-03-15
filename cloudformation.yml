@@ -13,21 +13,21 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 172.31.16.0/20
+          CidrIp: 000000
       Tags:
         - Key: Name
           Value: MyWebServer SG
-      VpcId: vpc-0a42538848da0e782
+      VpcId: 0000000
 
   EC2Instance:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      SubnetId: subnet-050d6e4ee35155484
+      SubnetId: 000000
       SecurityGroupIds:
         - !Ref WebServerSG
       KeyName: mywebserever
-      ImageId: ami-0df24e148fdb9f1d8 
+      ImageId: 000000
       Tags:
         - Key: Name
           Value: MyWebServer
